@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../public/css/userStyle.css">
+      <!-- <link rel="stylesheet" href="../public/css/resets.css"> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Mali" rel="stylesheet">
+
+      <title></title>
+   </head>
+   <body>
+     <h2>My Library</h2>
+     <div class="header">
+      <h3 id="userName">user name</h3>
+      <form action="/logout" method="GET">
+      <input type="submit"  value="Logout" id="logout" type="button">
+    </form>
+     </div>
+      <!-- add user name -->
+      <section id="addBook">
+         <h2>Add Book</h2>
+         <form action="/addbook" method="POST">
+         <label for="bookName"><input type="text" name="bookName" value="" placeholder="Enter book name">Book name</label><br>
+         <label for="bookLink"><input type="text" name="bookLink" value="" placeholder="Book link">Book Link</label><br>
+         <label for="bookRate">
+            <select>
+               <option value="not good">1</option>
+               <option value="not bad">2</option>
+               <option value="good">3</option>
+               <option value="very good">4</option>
+               <option value="excellent">5</option>
+            </select>
+          Rating
+         </label>
+         <br>
+         <label for="bookImg"><input type="file" name="bookImg" value="" placeholder="Book image">Image</label>
+         <br>
+         <br>
+         <input type="submit" name="submit" value="Add Book" id="addbook">
+       </from>
+
+      </section>
+      <section id="search">
+         <h2>Search</h2>
+         <div>
+            <input type="text" name="search" value="" id="search_text" >
+            <button type="button" id="searchButton"><i class="fa fa-search"></i></button>
+         </div>
+         <div class="resultsContainer">
+            <div class="bookContainer">
+              <div class="res">
+                <!-- <img src="" alt="book image"> -->
+              </div>
+               <!-- <p>book name</p>
+               <p>rating</p>
+               <a href="#">
+                  <p>book link</p>
+               </a> -->
+            </div>
+         </div>
+      </section>
+      <script type="text/javascript"  src="../public/js/dom.js"></script>
+   </body>
+</html>
